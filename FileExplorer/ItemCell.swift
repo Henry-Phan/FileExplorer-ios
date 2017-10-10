@@ -151,26 +151,26 @@ final class ItemCell: UICollectionViewCell, Editable {
     private func setupAccessoryImageViewConstraints() {
         accessoryImageView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -15).isActive = true
         accessoryImageView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
-        accessoryImageView.setContentCompressionResistancePriority(UILayoutPriority.required, for: .horizontal)
-        accessoryImageView.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: .vertical)
-        accessoryImageView.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .horizontal)
+        accessoryImageView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: UILayoutPriority.required.rawValue), for: .horizontal)
+        accessoryImageView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: UILayoutPriority.defaultHigh.rawValue), for: .vertical)
+        accessoryImageView.setContentHuggingPriority(UILayoutPriority(rawValue: UILayoutPriority.defaultHigh.rawValue), for: .horizontal)
     }
     
     private func setupTitleLabelContstraints() {
         titleTextLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 12.0).isActive = true
         titleTextLabel.trailingAnchor.constraint(equalTo: accessoryImageView.leadingAnchor, constant: -10.0).isActive = true
         titleTextLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 12.0).isActive = true
-        titleTextLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh, for: .horizontal)
-        titleTextLabel.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .vertical)
+        titleTextLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: UILayoutPriority.defaultHigh.rawValue), for: .horizontal)
+        titleTextLabel.setContentHuggingPriority(UILayoutPriority(rawValue: UILayoutPriority.defaultHigh.rawValue), for: .vertical)
     }
     
     private func setupSubtitleLabelConstraints() {
         subtitleTextLabel.leadingAnchor.constraint(equalTo: titleTextLabel.leadingAnchor).isActive = true
         subtitleTextLabel.trailingAnchor.constraint(equalTo: titleTextLabel.trailingAnchor).isActive = true
         subtitleTextLabel.topAnchor.constraint(equalTo: titleTextLabel.bottomAnchor, constant: 3.0).isActive = true
-        subtitleTextLabel.setContentCompressionResistancePriority(UILayoutPriority.defaultHigh
+        subtitleTextLabel.setContentCompressionResistancePriority(UILayoutPriority(rawValue: UILayoutPriority.defaultHigh.rawValue)
             , for: .horizontal)
-        subtitleTextLabel.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: .vertical)
+        subtitleTextLabel.setContentHuggingPriority(UILayoutPriority(rawValue: UILayoutPriority.defaultHigh.rawValue), for: .vertical)
     }
 
     private func setupCheckmarkButtonConstraints() {
