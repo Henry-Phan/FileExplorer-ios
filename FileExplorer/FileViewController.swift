@@ -46,15 +46,15 @@ final class FileViewController: UIViewController {
         imageView.translatesAutoresizingMaskIntoConstraints = false
 //        imageView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 250), for: .vertical)
 //        imageView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 250), for: .horizontal)
-        attributesView.setContentCompressionResistancePriority(UILayoutPriority.init(250), for: .vertical)
-        attributesView.setContentCompressionResistancePriority(UILayoutPriority.init(250), for: .horizontal)
+        imageView.setContentCompressionResistancePriority(UILayoutPriority.init(250), for: .vertical)
+        imageView.setContentCompressionResistancePriority(UILayoutPriority.init(250), for: .horizontal)
         let titleView = TitleView()
         titleView.translatesAutoresizingMaskIntoConstraints = false
         titleView.title = viewModel.title
 //        titleView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .vertical)
 //        titleView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .horizontal)
-        attributesView.setContentCompressionResistancePriority(UILayoutPriority.init(1000), for: .vertical)
-        attributesView.setContentCompressionResistancePriority(UILayoutPriority.init(1000), for: .horizontal)
+        titleView.setContentCompressionResistancePriority(UILayoutPriority.init(1000), for: .vertical)
+        titleView.setContentCompressionResistancePriority(UILayoutPriority.init(1000), for: .horizontal)
 
         let attributesView = AttributesView()
         attributesView.translatesAutoresizingMaskIntoConstraints = false
