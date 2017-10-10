@@ -44,21 +44,22 @@ final class FileViewController: UIViewController {
 
         let imageView = ImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: UILayoutPriority.defaultLow.rawValue), for: .vertical)
-        imageView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: UILayoutPriority.defaultLow.rawValue), for: .horizontal)
+        imageView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 250), for: .vertical)
+        imageView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 250), for: .horizontal)
 
         let titleView = TitleView()
         titleView.translatesAutoresizingMaskIntoConstraints = false
         titleView.title = viewModel.title
-        titleView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: UILayoutPriority.required.rawValue), for: .vertical)
-        titleView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: UILayoutPriority.required.rawValue), for: .horizontal)
+        titleView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .vertical)
+        titleView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .horizontal)
 
 
         let attributesView = AttributesView()
         attributesView.translatesAutoresizingMaskIntoConstraints = false
         attributesView.numberOfAttributes = viewModel.numberOfAttributes
-        attributesView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: UILayoutPriority.required.rawValue), for: .vertical)
-        attributesView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: UILayoutPriority.required.rawValue), for: .horizontal)
+        attributesView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .vertical)
+    
+        attributesView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 1000), for: .horizontal)
         for (index, label) in attributesView.attributeNamesColumn.labels.enumerated() {
             let attributeViewModel = viewModel.attribute(for: index)
             label.text = attributeViewModel.attributeName
