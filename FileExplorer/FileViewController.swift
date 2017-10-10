@@ -155,7 +155,7 @@ final class TitleView: UIView {
         titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -1.0).isActive = true
         titleLabel.widthAnchor.constraint(equalTo: widthAnchor, constant: -20.0).isActive = true
-        titleLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 1000), for: .vertical)
+//        titleLabel.setContentHuggingPriority(UILayoutPriority(rawValue: 1000), for: .vertical)
         titleLabel.numberOfLines = 1
         titleLabel.lineBreakMode = .byTruncatingTail
 
